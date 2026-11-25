@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>btcmex · Importación MX–HK</title>
+<meta name="description" content="Cuatro agentes integran el expediente completo para pagar mercancía de Hong Kong con stablecoin desde México: KYC, Regla de Viaje, respaldo SAT y despacho aduanal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="wordmark" href="#inicio" aria-label="btcmex, inicio">
+      <svg class="wordmark__mark" viewBox="0 0 22 22" aria-hidden="true">
+        <rect x="1" y="1" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M6 15 L11 7 L16 15" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      btcmex
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a class="link" href="#flujo" data-nav="flujo">Cómo funciona</a>
+      <a class="link" href="#expediente-unico" data-nav="expediente-unico">Expediente</a>
+      <a class="link" href="#marco" data-nav="marco">Marco regulatorio</a>
+    </nav>
+    <div class="nav__right">
+      <button class="cmdk-pill" type="button" data-open-palette aria-label="Abrir buscador de comandos">
+        Buscar o ir a… <kbd>⌘K</kbd>
+      </button>
+      <button class="btn btn--ghost btn--sm nav__search-icon" type="button" data-open-palette aria-label="Abrir buscador de comandos">
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <a class="btn btn--primary btn--sm" href="#plataforma" data-nav-app>Abrir plataforma</a>
+    </div>
+  </div>
+</header>
+
+<main id="view-landing">
+
+  <section class="hero" id="inicio">
+    <div class="wrap hero__grid">
+      <div>
+        <h1>Importa de Hong Kong. Paga en <span class="hl">stablecoin</span>.</h1>
+        <p class="hero__lede">Cuatro agentes integran el expediente completo de tu operación: KYC en México, Regla de Viaje en Hong Kong, respaldo ante el SAT y despacho aduanal. Cada documento queda amarrado al mismo TXID.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="#plataforma">Abrir plataforma</a>
+          <a class="link" href="#flujo">Ver las cuatro etapas</a>
+        </div>
+        <div class="hero__route" aria-label="Ruta del dinero">
+          <span><b>MXN</b> · SPEI desde tu cuenta</span>
+          <span><b>USDT</b> · exchange regulado MX</span>
+          <span><b>HKD / USD</b> · liquidación del proveedor</span>
+        </div>
+      </div>
+
+      <figure class="code-card" style="margin:0" aria-label="Registro de una operación">
+        <div class="code-card__head">
+          <span>expediente / OP-2611-0001.json</span>
+          <span class="chip-ok">Íntegro</span>
+        </div>
+<pre><span class="tok-p">{</span>
+  <span class="tok-k">"mercancia"</span><span class="tok-p">:</span> <span class="tok-s">"20 playeras · 100 % algodón"</span><span class="tok-p">,</span>
+  <span class="tok-k">"ruta"</span><span class="tok-p">:</span> <span class="tok-s">"MXN → USDT (TRC-20) → HKD"</span><span class="tok-p">,</span>
+  <span class="tok-k">"agentes"</span><span class="tok-p">: {</span>
+    <span class="tok-k">"IA1"</span><span class="tok-p">:</span>   <span class="tok-s">"kyc_conciliado"</span><span class="tok-p">,</span>
+    <span class="tok-k">"IA2"</span><span class="tok-p">:</span>   <span class="tok-s">"travel_rule_firmada"</span><span class="tok-p">,</span>
+    <span class="tok-k">"IA3"</span><span class="tok-p">:</span>   <span class="tok-s">"nif_c22_registrada"</span><span class="tok-p">,</span>
+    <span class="tok-k">"IA3.3"</span><span class="tok-p">:</span> <span class="tok-s">"pedimento_pagado"</span>
+  <span class="tok-p">},</span>
+  <span class="tok-k">"txid"</span><span class="tok-p">:</span> <span class="tok-s" id="typein" data-text='"9f3c51a0…7be2e21a"'>"9f3c51a0…7be2e21a"</span><span class="caret" aria-hidden="true"></span>
+<span class="tok-p">}</span></pre>
+        <div class="code-card__foot">
+          <span>14 documentos · 4 agentes</span>
+          <span>MX ⇄ HK</span>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="flujo">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <h2>Una importación, cuatro etapas, un expediente.</h2>
+        <p>Cada agente sabe qué pide la ley en su tramo y no deja avanzar la operación hasta que el documento correcto está en su lugar.</p>
+      </div>
+
+      <ol class="stages">
+        <li class="stage reveal">
+          <div>
+            <div class="stage__num">1.0 · Salida MXN</div>
+            <h3>Del peso a la stablecoin, con expediente KYC.</h3>
+            <div class="stage__agent"><span class="agent-tag">Agente IA1</span><span class="agent-tag">IA1.concilia</span></div>
+            <p class="stage__basis">Ley Fintech · LFPIORPI</p>
+          </div>
+          <div class="stage__body">
+            <p>Antes de mandar un SPEI a un exchange regulado en México, IA1.concilia arma tu expediente de identificación, extrae y concilia CURP con RFC, y verifica que los pesos salgan de una cuenta a tu nombre.</p>
+            <ul class="doclist">
+              <li><span class="n">01</span><span><b>Identificación oficial vigente</b> — INE o pasaporte, con la validación biométrica de la plataforma.</span></li>
+              <li><span class="n">02</span><span><b>Constancia de Situación Fiscal</b> — RFC vinculado a tu identidad. Persona moral suma acta, poderes y beneficiarios finales.</span></li>
+              <li><span class="n">03</span><span><b>Comprobante de domicilio</b> — no mayor a 3 meses.</span></li>
+              <li><span class="n">04</span><span><b>Estado de cuenta de origen</b> — la cuenta desde donde sale el SPEI; no se aceptan terceros.</span></li>
+              <li><span class="n">05</span><span><b>Comprobante de conversión</b> — fecha, hora, tipo de cambio, comisiones y monto adquirido: tu costo de adquisición ante el SAT.</span></li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="stage reveal">
+          <div>
+            <div class="stage__num">2.0 · Envío a Hong Kong</div>
+            <h3>El pago viaja con su Regla de Viaje.</h3>
+            <div class="stage__agent"><span class="agent-tag">Agente IA2</span></div>
+            <p class="stage__basis">SFC · HKMA Stablecoins Ordinance · Travel Rule</p>
+          </div>
+          <div class="stage__body">
+            <p>IA2 emite la orden de compra, recibe la proforma con la wallet y la red del proveedor, valida el formato de la dirección y no libera el envío hasta que la declaración de la Regla de Viaje está firmada.</p>
+            <ul class="doclist">
+              <li><span class="n">06</span><span><b>Orden de compra</b> — modelo, tallas, materiales, 20 piezas, precio unitario y pago en activos virtuales.</span></li>
+              <li><span class="n">07</span><span><b>Factura proforma</b> — monto, wallet exacta, red (ERC-20, TRC-20, Polygon) y paridad 1 USDT = 1 USD.</span></li>
+              <li><span class="n">08</span><span><b>Declaración de Regla de Viaje</b> — beneficiario y tipo de wallet: custodial o no custodial.</span></li>
+              <li><span class="n">09</span><span><b>TXID y comprobante de explorador</b> — emisora, receptora, monto y fecha/hora.</span></li>
+              <li><span class="n">10</span><span><b>Factura comercial y recibo de pago</b> — la deuda queda liquidada al recibir la stablecoin.</span></li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="stage reveal">
+          <div>
+            <div class="stage__num">3.0 · Respaldo SAT</div>
+            <h3>Permuta, valuación y materialidad.</h3>
+            <div class="stage__agent"><span class="agent-tag">Agente IA3</span></div>
+            <p class="stage__basis">NIF C-22 · CARF 2026</p>
+          </div>
+          <div class="stage__body">
+            <p>Pagar mercancía con cripto es, jurídicamente, una enajenación o permuta. IA3 redacta el contrato, calcula la ganancia o pérdida entre la compra del activo y su entrega al proveedor, y reúne la evidencia de que la operación existió.</p>
+            <ul class="doclist">
+              <li><span class="n">11</span><span><b>Contrato de permuta o dación en pago</b> — el proveedor acepta stablecoin como pago total.</span></li>
+              <li><span class="n">12</span><span><b>Hoja de valuación NIF C-22</b> — valor en pesos al comprar contra valor en pesos al transferir.</span></li>
+              <li><span class="n">13</span><span><b>Expediente de materialidad</b> — correos, cotizaciones, conversaciones y TXID.</span></li>
+              <li><span class="n">14</span><span><b>Pedimento a tu nombre</b> — sin él, una factura extranjera pagada con cripto no es deducible.</span></li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="stage reveal">
+          <div>
+            <div class="stage__num">4.0 · Aduana</div>
+            <h3>Dos rutas de despacho, según el destino de la mercancía.</h3>
+            <div class="stage__agent"><span class="agent-tag">Subagente IA3.3</span><span class="agent-tag">Agente Proveedores</span></div>
+            <p class="stage__basis">ANAM · VUCEM · NOM-004-SE-2021</p>
+          </div>
+          <div class="stage__body">
+            <p>El textil es de los sectores más vigilados. La plataforma elige la ruta con base en lo que declaraste en la etapa 3 y calcula IGI, DTA e IVA antes de pagar el pedimento.</p>
+            <div class="split-routes">
+              <div class="route-box">
+                <h4>A · Carga formal</h4>
+                <p>Reventa o criterio comercial. IA3.3 coordina al agente aduanal.</p>
+                <ul class="doclist">
+                  <li><span class="n">A1</span><span>Padrón de Importadores y Sectorial Textil (Sector 11)</span></li>
+                  <li><span class="n">A2</span><span>Encargo conferido con e.firma</span></li>
+                  <li><span class="n">A3</span><span>COVE y MVE con el TXID como prueba de pago</span></li>
+                  <li><span class="n">A4</span><span>Etiquetado NOM-004 y pedimento pagado</span></li>
+                </ul>
+              </div>
+              <div class="route-box">
+                <h4>B · Paquetería</h4>
+                <p>Uso personal por DHL, FedEx o UPS.</p>
+                <ul class="doclist">
+                  <li><span class="n">B1</span><span>RFC o CURP del destinatario</span></li>
+                  <li><span class="n">B2</span><span>Carta de uso personal</span></li>
+                  <li><span class="n">B3</span><span>Factura, recibo del exchange y TXID</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section band" id="expediente-unico">
+    <div class="wrap band__grid">
+      <div class="reveal">
+        <div class="section__head" style="margin-bottom:var(--space-lg)">
+          <h2>Todo el expediente cuelga de un solo TXID.</h2>
+          <p>El hash de la transferencia es la prueba que comparten el exchange, el proveedor, el SAT y la aduana. La plataforma lo propaga a cada documento que lo necesita.</p>
+        </div>
+        <ul class="band__points">
+          <li><b>Sin depósitos de terceros.</b> IA1.concilia compara el titular de la cuenta de origen con tu identidad antes del SPEI.</li>
+          <li><b>Wallet verificada antes de enviar.</b> IA2 valida el formato de la dirección contra la red pactada en la proforma.</li>
+          <li><b>Costo de adquisición documentado.</b> El comprobante de conversión alimenta la valuación NIF C-22.</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <table class="ledger">
+          <thead><tr><th scope="col">Documento</th><th scope="col">Usa el TXID para</th><th scope="col">Lo pide</th></tr></thead>
+          <tbody>
+            <tr><td>Comprobante de explorador</td><td>Probar emisora, receptora, monto y hora</td><td class="mono">IA2</td></tr>
+            <tr><td>Recibo de pago del proveedor</td><td>Liquidar la deuda de la orden de compra</td><td class="mono">IA2</td></tr>
+            <tr><td>Expediente de materialidad</td><td>Demostrar que la operación existió</td><td class="mono">IA3</td></tr>
+            <tr><td>Hoja NIF C-22</td><td>Fijar la fecha y hora de la enajenación</td><td class="mono">IA3</td></tr>
+            <tr><td>COVE y MVE</td><td>Declarar el método de pago en VUCEM</td><td class="mono">IA3.3</td></tr>
+            <tr><td>Comprobante de pago en paquetería</td><td>Sostener el valor real declarado</td><td class="mono">Proveedores</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="marco">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <h2>El marco que cada agente aplica.</h2>
+        <p>Dos jurisdicciones, una sola operación. La plataforma traduce cada norma en un documento concreto.</p>
+      </div>
+      <table class="spec reveal">
+        <tbody>
+          <tr><th scope="row"><span class="juris">MX · IA1</span>Ley Fintech y LFPIORPI</th><td>Expediente de identificación (KYC) para operar con un exchange regulado y acreditar el origen de los recursos.</td></tr>
+          <tr><th scope="row"><span class="juris">HK · IA2</span>SFC, HKMA y Stablecoins Ordinance</th><td>Reglas AML para plataformas y comercios que reciben stablecoin y liquidan en HKD o USD.</td></tr>
+          <tr><th scope="row"><span class="juris">MX ⇄ HK · IA2</span>Regla de Viaje</th><td>Datos del ordenante y del beneficiario viajan con la transferencia; se declara si la wallet destino es custodial.</td></tr>
+          <tr><th scope="row"><span class="juris">MX · IA3</span>CARF y NIF C-22</th><td>El SAT cruza datos bancarios y de plataformas cripto; la valuación en pesos se registra al comprar y al transferir.</td></tr>
+          <tr><th scope="row"><span class="juris">MX · IA3.3</span>Padrón Sectorial Textil, VUCEM y NOM-004-SE-2021</th><td>Inscripción en el Sector 11, COVE y MVE transmitidos con el método de pago, y etiqueta en español en cada prenda.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="cta-strip">
+    <div class="wrap cta-strip__inner">
+      <h2>Abre la operación y deja que los agentes armen el expediente.</h2>
+      <a class="btn btn--primary" href="#plataforma">Abrir plataforma</a>
+    </div>
+  </section>
+</main>
+
+<main id="view-app" hidden></main>
+
+<footer class="foot-line">
+  <div class="wrap foot-line__row">
+    <span class="wordmark">btcmex</span>
+    <p>© 2026 · Operaciones MX ⇄ HK con stablecoin · La información de la plataforma no sustituye la asesoría fiscal, legal ni aduanal profesional.</p>
+  </div>
+</footer>
+
+<div class="palette" id="palette" hidden>
+  <div class="palette__box" role="dialog" aria-modal="true" aria-label="Buscador de comandos">
+    <input class="palette__input" id="palette-input" type="text" autocomplete="off" spellcheck="false" placeholder="Escribe un comando o una etapa…" aria-controls="palette-list" aria-activedescendant="">
+    <ul class="palette__list" id="palette-list" role="listbox" aria-label="Comandos"></ul>
+  </div>
+</div>
+
+<div class="toast-stack" id="toasts" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
